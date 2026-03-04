@@ -5,12 +5,12 @@ pipeline{
     stages{
         stage('Build'){
 		steps{
-			bat 'mvn package'
+			bat 'mvn install'
 			}
 		}
 		stage('Run'){
 			steps{
-				bat 'java-jar target/1.7'
+				bat 'java-jar target/1.5.jar'
 			}
 		}
 
